@@ -1,0 +1,29 @@
+uses STArduino;
+const	ledPin = 7;
+		buttonPin  = 8;
+var button, lastbutton, counter : integer;
+
+procedure setup;
+begin
+	pinMode(ledPin, OUTPUT);	{Cài đặt chân D7 dưới dạng OUTPUT}
+	pinMode(buttonPin, INPUT);	{Cài đặt chân D8 dưới dạng INPUT}
+end;
+procedure loop;
+begin
+	button := digitalRead(buttonPin);
+	if button <> lastbutton then 
+		if button = HIGH then inc(counter);
+	lastbutton := button; {luu lai gia tri button hien tai}
+	if button mod 4 = 0 then
+		digitalWrite(ledPin, HIGH)
+	else 
+	begin 
+		digitalWrite(ledPin, LOW);
+		counter := 0;
+	end;
+end;
+{CHUONG TRINH CHINH}
+begin
+	setup;
+	loop;		
+end.
