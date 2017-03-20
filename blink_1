@@ -1,0 +1,44 @@
+program lighting_led_1;
+uses STArduino;
+const
+	PIN2 = 2;
+	PIN3 = 3;
+	PIN4 = 4;
+	PIN5 = 5;
+	PIN6 = 6;
+procedure setup;
+begin
+	pinMode(PIN2, OUTPUT); {khoi tao chan 2 la tin hieu phat}
+	pinMode(PIN3, OUTPUT); {khoi tao chan 3 la tin hieu phat}
+	pinMode(PIN4, OUTPUT); {khoi tao chan 4 la tin hieu phat}
+	pinMode(PIN5, OUTPUT); {khoi tao chan 5 la tin hieu phat}
+	pinMode(PIN6, OUTPUT); {khoi tao chan 6 la tin hieu phat}
+end;
+procedure loop;
+begin
+	digitalWrite(PIN2, HIGH);   {bat den LED (HIGH la co dong dien)}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN2, LOW);    {tat den LED bang cach thiet lap dong dien = LOW}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN3, HIGH);   {bat den LED (HIGH la co dong dien)}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN3, LOW);    {tat den LED bang cach thiet lap dong dien = LOW}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN4, HIGH);   {bat den LED (HIGH la co dong dien)}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN4, LOW);    {tat den LED bang cach thiet lap dong dien = LOW}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN5, HIGH);   {bat den LED (HIGH la co dong dien)}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN5, LOW);    {tat den LED bang cach thiet lap dong dien = LOW}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN6, HIGH);   {bat den LED (HIGH la co dong dien)}
+	delay(500);              {doi 1/10 giay}
+	digitalWrite(PIN6, LOW);    {tat den LED bang cach thiet lap dong dien = LOW}
+	delay(500);              {doi 1/10 giay}
+end;
+{CHUONG TRINH CHINH}
+begin
+	setup;
+	loop;
+end.
