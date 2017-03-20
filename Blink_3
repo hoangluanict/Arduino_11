@@ -1,0 +1,21 @@
+uses STArduino;
+const	ledPin = 11;
+		bientro = A0;
+var gtbientro, gtden : integer;
+
+procedure setup;
+begin
+	pinMode(ledPin,OUTPUT);
+end;
+procedure loop;
+begin
+	gtbientro := analogRead(bientro);
+	gtden := gtbientro*255 div 1023;
+	analogWrite(ledPin, gtden);
+	delay(2);
+end;
+{CHUONG TRINH CHINH}
+begin
+	setup;
+	loop;		
+end.
