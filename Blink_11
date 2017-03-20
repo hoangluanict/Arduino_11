@@ -1,0 +1,27 @@
+program lighting_led_2;
+uses STArduino;
+const led : array[1..5] of byte =(2,3,4,5,6);
+var i : byte;
+
+procedure setup;
+var k : byte;
+begin
+	for k:= 2 to 6 do
+		pinMode(k,OUTPUT); {khoi tao chan 2,3,4,5,6 la tin hieu phat - OUTPUT}
+end;
+procedure loop;
+begin
+	for i:= 1 to 5 do
+	begin
+		digitalWrite(led[i], HIGH);   {bat den LED (HIGH la co dong dien)}
+		delay(500);              {doi 1/10 giay}
+		digitalWrite(led[i], LOW);    {tat den LED bang cach thiet lap dong dien = LOW}
+		delay(500);              {doi 1/10 giay}
+	end;
+end;
+
+{CHUONG TRINH CHINH}
+begin
+	setup;
+	loop;
+end.
