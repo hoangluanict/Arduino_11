@@ -1,0 +1,24 @@
+uses STArduino;
+const	ledPin = 12;
+		buttonPin  = 2;
+var button : integer;
+
+procedure setup;
+begin
+	pinMode(ledPin, OUTPUT);	{Cài đặt chân D12 dưới dạng OUTPUT}
+	pinMode(buttonPin, INPUT);	{Cài đặt chân D2 dưới dạng INPUT, INPUT_PULLUP}
+end;
+procedure loop;
+begin
+	button := digitalRead(buttonPin);
+	if button = HIGH then
+		digitalWrite(ledPin, HIGH)
+	else digitalWrite(ledPin, LOW);
+	delay(1000);
+end;
+{CHUONG TRINH CHINH}
+begin
+	setup;
+	loop;		
+end.
+
